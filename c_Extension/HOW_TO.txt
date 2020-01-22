@@ -1,0 +1,24 @@
+(env) PS E:\Py\Basics\c_Extension\fputsmodule> python setup.py install
+running install
+running build
+running build_ext
+building 'fputs' extension
+creating build
+creating build\temp.win32-3.7
+creating build\temp.win32-3.7\Release
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MT -IC:\Users\win10\AppData\Local\Programs\Python\Python37-32\include -IC:\Users\win10\AppData\Local\Programs\Python\Python37-32\include "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include" "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" /Tcfputsmodule.c /Fobuild\temp.win32-3.7\Release\fputsmodule.obj
+fputsmodule.c
+creating E:\Py\Basics\c_Extension\fputsmodule\build\lib.win32-3.7
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\link.exe /nologo /INCREMENTAL:NO /LTCG /nodefaultlib:libucrt.lib ucrt.lib /DLL /MANIFEST:EMBED,ID=2 /MANIFESTUAC:NO /LIBPATH:C:\Users\win10\AppData\Local\Programs\Python\Python37-32\Libs /LIBPATH:E:\Py\env\libs /LIBPATH:E:\Py\env\PCbuild\win32 "/LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\lib\x86" "/LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\lib\x86" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\ucrt\x86" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x86" /EXPORT:PyInit_fputs build\temp.win32-3.7\Release\fputsmodule.obj /OUT:build\lib.win32-3.7\fputs.cp37-win32.pyd /IMPLIB:build\temp.win32-3.7\Release\fputs.cp37-win32.lib
+   Creating library build\temp.win32-3.7\Release\fputs.cp37-win32.lib and object build\temp.win32-3.7\Release\fputs.cp37-win32.exp
+Generating code
+Finished generating code
+running install_lib
+copying build\lib.win32-3.7\fputs.cp37-win32.pyd -> E:\Py\env\Lib\site-packages
+running install_egg_info
+Writing E:\Py\env\Lib\site-packages\fputs-1-py3.7.egg-info
+(env) PS E:\Py\Basics\c_Extension\fputsmodule> python
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import fputs
+>>> #works

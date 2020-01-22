@@ -1,0 +1,6 @@
+greetmodule.c
+setup.py
+greet.egg-info/PKG-INFO
+greet.egg-info/SOURCES.txt
+greet.egg-info/dependency_links.txt
+greet.egg-info/top_level.txt
