@@ -1,0 +1,3 @@
+** convert the dll from release to pyd **
+filetype = ["dylib"]
+cargo build --release
