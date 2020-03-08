@@ -4,32 +4,29 @@
 extern crate time;
 use std::time::{Instant};
 
-fn prime_sieve(max_number_to_check: usize) -> u32 {
-    let mut prime_mask = vec![true; max_number_to_check];
+fn prime_sieve(max_number_to_check: usize , prime_mask : &mut Vec<bool>){
     prime_mask[0] = false;
     prime_mask[1] = false;
-    let mut total_primes_found = 0;
-    const FIRST_PRIME_NUMBER: usize = 2;
-
-    for p in FIRST_PRIME_NUMBER..max_number_to_check {
-        if prime_mask[p] {
-            total_primes_found += 1;
-            let mut i = 2 * p;
-            while i < max_number_to_check {
-                prime_mask[i] = false;
-                i += p;
-            }
-        }
+    let mut p: usize = 2;
+    while p*p <= max_number_to_check{
+    	if prime_mask[p]{
+    	    let mut i = p*p;
+    	    while i <= max_number_to_check{
+    	    	prime_mask[i] = false;
+    	    	i += p;
+    	    }
+    	}
+    	p += 1
     }
-    total_primes_found
 }
 
 fn main() {
-    let n: usize = 1e7f64 as i64 as usize;
+    let n: usize = 1e5f64 as i64 as usize;
+    let prime_mask: &mut Vec<bool> = &mut vec![true; n+2];
     let now = Instant::now();
-    let np = prime_sieve(n);
-	println!("Time elapsed = {:?} , Primes = {} ",now.elapsed() , np);
-
+    prime_sieve(n , prime_mask);
+    println!("Time elapsed = {:?} , N = {} ",now.elapsed() , n);
 }
 
-// 1e7 in  6.274231131s
+// 1e7 in  1.770041056
+// 1e8 in  18.258102879
